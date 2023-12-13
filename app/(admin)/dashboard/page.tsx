@@ -10,8 +10,11 @@ import {
   TabPanels,
   Text,
   Title,
-  Metric,
 } from "@tremor/react";
+import SalesChart from "./SalesChart";
+import NewCustomer from "./NewCustomers";
+import TopSection from "./TopSection";
+import CostChart from "./CostChart";
 
 export default function DashboardExample() {
   return (
@@ -26,29 +29,13 @@ export default function DashboardExample() {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
-              <Card
-                className="max-w-xs mx-auto"
-                decoration="top"
-                decorationColor="indigo"
-              >
-                <Text>Sales</Text>
-                <Metric>$ 34,743</Metric>
-              </Card>
-
-              <Card>
-                {/* Placeholder to set height */}
-                <div className="h-28" />
-              </Card>
-              <Card>
-                {/* Placeholder to set height */}
-                <div className="h-28" />
-              </Card>
-            </Grid>
+            <TopSection />
             <div className="mt-6">
-              <Card>
-                <div className="h-80" />
-              </Card>
+              <SalesChart />
+              <div className="mt-6 flex space-x-6">
+                <NewCustomer />
+                <CostChart />
+              </div>
             </div>
           </TabPanel>
           <TabPanel>
