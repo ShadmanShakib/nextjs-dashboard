@@ -10,6 +10,7 @@ import {
   TabPanels,
   Text,
   Title,
+  Metric,
 } from "@tremor/react";
 
 export default function DashboardExample() {
@@ -26,10 +27,15 @@ export default function DashboardExample() {
         <TabPanels>
           <TabPanel>
             <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
-              <Card>
-                {/* Placeholder to set height */}
-                <div className="h-28" />
+              <Card
+                className="max-w-xs mx-auto"
+                decoration="top"
+                decorationColor="indigo"
+              >
+                <Text>Sales</Text>
+                <Metric>$ 34,743</Metric>
               </Card>
+
               <Card>
                 {/* Placeholder to set height */}
                 <div className="h-28" />
