@@ -1,5 +1,6 @@
 import React from "react";
 import { Sidebar } from "../components/shared";
+import { Topbar } from "./components";
 
 type Props = {
   children: React.ReactNode;
@@ -7,12 +8,15 @@ type Props = {
 
 function layout({ children }: Props) {
   return (
-    <div className="flex">
-      <div className="w-60">
-        <Sidebar />
+    <>
+      <Topbar />
+      <div className="flex">
+        <div className="w-60">
+          <Sidebar />
+        </div>
+        <div className=" p-6">{children}</div>
       </div>
-      <div className=" p-6">{children}</div>
-    </div>
+    </>
   );
 }
 

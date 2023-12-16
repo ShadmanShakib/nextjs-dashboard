@@ -20,7 +20,7 @@ type Props = {};
 export default function TableComponent({}: Props) {
   return (
     <Card>
-      <Title>List of Swiss Federal Councillours</Title>
+      <Title className="">List of products </Title>
       <Table className="mt-5">
         <TableHead>
           <TableRow>
