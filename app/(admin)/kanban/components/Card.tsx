@@ -1,6 +1,5 @@
 "use client";
 
-import { ElementRef, useRef, useState } from "react";
 import { Draggable } from "@hello-pangea/dnd";
 
 type Props = {

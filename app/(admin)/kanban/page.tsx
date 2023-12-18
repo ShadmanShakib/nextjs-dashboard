@@ -4,7 +4,7 @@ type Props = {};
 
 function page({}: Props) {
   return (
-    <main>
+    <main className=" rounded-md w-full">
       <Board />
     </main>
   );

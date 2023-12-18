@@ -9,7 +9,7 @@ type Props = {};
 
 const Sidebar = (props: Props) => {
   return (
-    <aside className="w-full bg-[#2e2e30] text-white p-2  dark:bg-gray-600 min-h-screen ">
+    <aside className="w-full bg-[#2e2e30]  text-white p-2  dark:bg-gray-600 min-h-screen ">
       <div className="flex items-center space-x-3 py-3 ">
         <Image
           className="rounded-full "

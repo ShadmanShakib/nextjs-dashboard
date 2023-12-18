@@ -9,12 +9,16 @@ type Props = {
 function layout({ children }: Props) {
   return (
     <>
-      <Topbar />
-      <div className="flex">
-        <div className="w-60">
-          <Sidebar />
+      <div className="relative">
+        <div className="fixed z-50 w-full h-16">
+          <Topbar />
         </div>
-        <div className=" p-6">{children}</div>
+        <div className="flex relative">
+          <div className="w-60 fixed z-50 mt-16">
+            <Sidebar />
+          </div>
+          <div className="  ml-60 mt-16">{children}</div>
+        </div>
       </div>
     </>
   );
