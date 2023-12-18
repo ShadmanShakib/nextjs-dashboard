@@ -1,34 +1,94 @@
-export const data = [
+export const defaultCols: Column[] = [
   {
-    id: "hehe",
-    title: "Task 1a",
+    id: "todo",
+    title: "Todo",
   },
   {
-    id: "hehedd3",
-    title: "Task 2e",
+    id: "doing",
+    title: "Work in progress",
+  },
+  {
+    id: "done",
+    title: "Done",
   },
 ];
+export type Id = string | number;
 
-export const listData = [
+export type Column = {
+  id: Id;
+  title: string;
+};
+
+export type Task = {
+  id: Id;
+  columnId: Id;
+  content: string;
+};
+export const defaultTasks: Task[] = [
   {
-    id: "h3h9c",
-    title: "Recently added",
-    tasks: [
-      { id: "h3hde9c3dr4", title: "Task 13" },
-      { id: "h3h9ccec4d", title: "Task 22" },
-    ],
+    id: "1",
+    columnId: "todo",
+    content: "List admin APIs for dashboard",
   },
   {
-    id: "h3h9c4d",
-    title: "Do today",
-    tasks: data,
+    id: "2",
+    columnId: "todo",
+    content:
+      "Develop user registration functionality with OTP delivered on SMS after email confirmation and phone number confirmation",
   },
   {
-    id: "3uckie3",
-    title: "Done",
-    tasks: [
-      { id: "c4d", title: "Task 52" },
-      { id: "h3h989c4d", title: "Task78" },
-    ],
+    id: "3",
+    columnId: "doing",
+    content: "Conduct security testing",
+  },
+  {
+    id: "4",
+    columnId: "doing",
+    content: "Analyze competitors",
+  },
+  {
+    id: "5",
+    columnId: "done",
+    content: "Create UI kit documentation",
+  },
+  {
+    id: "6",
+    columnId: "done",
+    content: "Dev meeting",
+  },
+  {
+    id: "7",
+    columnId: "done",
+    content: "Deliver dashboard prototype",
+  },
+  {
+    id: "8",
+    columnId: "todo",
+    content: "Optimize application performance",
+  },
+  {
+    id: "9",
+    columnId: "todo",
+    content: "Implement data validation",
+  },
+  {
+    id: "10",
+    columnId: "todo",
+    content: "Design database schema",
+  },
+  {
+    id: "11",
+    columnId: "todo",
+    content: "Integrate SSL web certificates into workflow",
+  },
+  {
+    id: "12",
+    columnId: "doing",
+    content: "Implement error logging and monitoring",
+  },
+  {
+    id: "13",
+    columnId: "doing",
+    content: "Design and implement responsive UI",
   },
 ];

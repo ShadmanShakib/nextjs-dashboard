@@ -1,11 +1,12 @@
 import React from "react";
-import Board from "./Board";
+
+import KanbanBoard from "./components/KanbanBoard";
 type Props = {};
 
 function page({}: Props) {
   return (
     <main className=" rounded-md w-full">
-      <Board />
+      <KanbanBoard />
     </main>
   );
 }
