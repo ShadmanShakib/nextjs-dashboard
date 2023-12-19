@@ -6,12 +6,7 @@ type Props = {
 };
 
 const layout = (props: Props) => {
-  return (
-    <div className="flex ">
-      <Sidebar />
-      <div className="flex-1">{props.children}</div>
-    </div>
-  );
+  return <div className="">{props.children}</div>;
 };
 
 export default layout;
