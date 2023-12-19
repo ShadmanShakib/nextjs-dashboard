@@ -2,6 +2,7 @@
 import { PlusIcon } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Column, Id, Task, defaultCols, defaultTasks } from "../data";
+import * as Portal from "@radix-ui/react-portal";
 import ColumnContainer from "./ColumnContainer";
 import {
   DndContext,
@@ -14,7 +15,7 @@ import {
   useSensors,
 } from "@dnd-kit/core";
 import { SortableContext, arrayMove } from "@dnd-kit/sortable";
-import { createPortal } from "react-dom";
+
 import TaskCard from "./TaskCard";
 
 function KanbanBoard() {
@@ -75,15 +76,9 @@ function KanbanBoard() {
             onClick={() => {
               createNewColumn();
             }}
-            className="
-      h-[60px]
-      w-[350px]
-      min-w-[350px]
-      cursor-pointer
-      rounded-lg
-      bg-mainBackgroundColor
+            className=" h-[60px] w-[350px] min-w-[350px] cursor-pointer rounded-lg bg-mainBackgroundColor
       border-2
-      border-columnBackgroundColor
+      border-pink-300
       p-4
       ring-rose-500
       hover:ring-2
@@ -95,8 +90,7 @@ function KanbanBoard() {
             Add Column
           </button>
         </div>
-
-        {createPortal(
+        <Portal.Root asChild>
           <DragOverlay>
             {activeColumn && (
               <ColumnContainer
@@ -118,9 +112,8 @@ function KanbanBoard() {
                 updateTask={updateTask}
               />
             )}
-          </DragOverlay>,
-          document.body,
-        )}
+          </DragOverlay>
+        </Portal.Root>
       </DndContext>
     </div>
   );
