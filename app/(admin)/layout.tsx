@@ -17,7 +17,7 @@ function layout({ children }: Props) {
           <div className="w-60 fixed z-50 mt-16">
             <Sidebar />
           </div>
-          <div className="  ml-60 mt-16">{children}</div>
+          <div className="  ml-60 mt-16 w-full">{children}</div>
         </div>
       </div>
     </>

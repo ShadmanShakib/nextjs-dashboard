@@ -18,7 +18,7 @@ import CostChart from "./CostChart";
 
 export default function DashboardExample() {
   return (
-    <main className="">
+    <main className="p-5">
       <Title>Dashboard</Title>
       <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</Text>
 
