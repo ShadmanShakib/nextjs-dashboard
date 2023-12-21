@@ -1,6 +1,7 @@
 import React from "react";
 import PricingCard from "./components/PricingCard";
-
+import { data } from "./data";
+import _ from "lodash";
 type Props = {};
 
 function Pricing({}: Props) {
@@ -14,8 +15,14 @@ function Pricing({}: Props) {
             right for you.
           </h3>
         </div>
-        <div className="grid xl:grid-cols-3">
-          <PricingCard />
+        <div className="grid gap-5 xl:grid-cols-3">
+          {_.map(data, (item, index) => (
+            <PricingCard
+              features={item.features}
+              key={index}
+              title={item.title}
+            />
+          ))}
         </div>
       </main>
     </div>
