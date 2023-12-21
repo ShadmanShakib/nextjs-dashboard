@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+
 import _ from "lodash";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
