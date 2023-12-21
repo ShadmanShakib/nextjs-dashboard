@@ -11,13 +11,15 @@ function Pricing({}: Props) {
         <div className="my-20 text-center">
           <h1 className="text-2xl text-center  ">Pricing</h1>
           <h3 className="">
-            Safely collect, process, and share your data with the plan that’s
-            right for you.
+            Safely collect, process, and share your data with the plan
+            that&apos;s right for you.
           </h3>
         </div>
         <div className="grid gap-5 xl:grid-cols-3">
           {_.map(data, (item, index) => (
             <PricingCard
+              btn_title={item.btn_title}
+              price={item.price}
               features={item.features}
               key={index}
               title={item.title}

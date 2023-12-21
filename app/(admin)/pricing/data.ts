@@ -5,6 +5,7 @@ export const data = [
     price: 0,
     description: "Explore the product and power small, personal projects.",
     features: ["1 project", "1 user", "Unilimited time", "1 environment"],
+    btn_title: "Try for free",
   },
   {
     id: "hh9ciies",
@@ -17,6 +18,7 @@ export const data = [
       "Unlimited time",
       "Unlimited environments",
     ],
+    btn_title: "Request a demo",
   },
   {
     id: "ci9899c",
@@ -30,5 +32,6 @@ export const data = [
       "Special Suppport",
       "Custom file decrypts",
     ],
+    btn_title: "Request a demo",
   },
 ];

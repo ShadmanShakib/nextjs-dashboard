@@ -6,9 +6,11 @@ import { Button } from "@/app/components/ui/button";
 type Props = {
   title: string;
   features: string[];
+  price: number;
+  btn_title: string;
 };
 
-function PricingCard({ title, features }: Props) {
+function PricingCard({ title, features, price, btn_title }: Props) {
   return (
     <div
       style={{
@@ -18,7 +20,7 @@ function PricingCard({ title, features }: Props) {
     >
       <h1 className="text-2xl font-medium mb-4">{title}</h1>
       <div className="mb-1">
-        <span className="text-xl font-medium">$0 &nbsp;</span>
+        <span className="text-xl font-medium">$ &nbsp;{price}&nbsp;</span>
         <span>per month</span>
       </div>
       <p>Explore the product and power small, personal projects.</p>
@@ -34,8 +36,8 @@ function PricingCard({ title, features }: Props) {
           </li>
         ))}
       </ul>
-      <Button className="bg-white text-black hover:bg-gray-200">
-        Try for free
+      <Button className="bg-white text-black hover:bg-gray-200 mt-10">
+        {btn_title}
       </Button>
     </div>
   );
