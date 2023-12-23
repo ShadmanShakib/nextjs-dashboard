@@ -1,5 +1,13 @@
 import React from "react";
-import { Card, Grid, Flex, Text, BadgeDelta, Metric } from "@tremor/react";
+import {
+  Card,
+  Grid,
+  Flex,
+  Text,
+  BadgeDelta,
+  Metric,
+  ProgressBar,
+} from "@tremor/react";
 
 type Props = {};
 
