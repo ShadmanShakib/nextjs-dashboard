@@ -6,6 +6,7 @@ import {
   HomeIcon,
   Table2Icon,
   TabletsIcon,
+  MessageSquare,
 } from "lucide-react";
 import SidebarLink from "./SidebarLink";
 import Image from "next/image";
@@ -19,6 +20,7 @@ const Sidebar = (props: Props) => {
       <SidebarLink href="/table" icon={<Table2Icon />} name="Table" />
       <SidebarLink href="/kanban" icon={<TabletsIcon />} name="Kanban" />
       <SidebarLink href="/pricing" icon={<CreditCardIcon />} name="Pricing" />
+      <SidebarLink href="/chats" icon={<MessageSquare />} name="Chats" />
     </aside>
   );
 };
