@@ -7,15 +7,16 @@ type Props = {
 
 function ChatAvatar({ online }: Props) {
   const className = cn(
-    "absolute bottom-0 right-0    z-50 h-3 w-3 border-white rounded-full border-2",
+    "absolute bottom-0 right-0 block z-50 h-3 w-3 border-white rounded-full border-2",
     online ? "bg-green-500" : "bg-red-500",
   );
   return (
-    <div className="relative">
+    <div className="relative inline-block">
       <Avatar>
         <AvatarImage className="border-2 border-white" src="cvpic.jpg" />
         <AvatarFallback>SS</AvatarFallback>
       </Avatar>
+
       <div className={className} />
     </div>
   );

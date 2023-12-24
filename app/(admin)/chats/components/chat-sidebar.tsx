@@ -8,16 +8,16 @@ type Props = {};
 
 function ChatSidebar({}: Props) {
   return (
-    <section className="border-r   border-gary-200">
+    <section className="border-r   border-gary-200 w-80">
       <SidebarHeader />
       <Separator />
       <div className="px-3">
         <h1 className="text-blue-500 my-3 font-medium">Chats</h1>
         <ScrollArea className="h-[70vh]">
           <div className="flex flex-col space-y-1 ">
-            <ChatItem active />
+            <ChatItem active online />
             <ChatItem />
-            <ChatItem />
+            <ChatItem online />
             <ChatItem />
             <ChatItem />
             <ChatItem />
