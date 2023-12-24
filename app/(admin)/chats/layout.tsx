@@ -13,16 +13,12 @@ type Props = {
 
 function layout({ children }: Props) {
   return (
-    <ResizablePanelGroup direction="horizontal">
-      <ResizablePanel defaultSize={200}>
+    <>
+      <div className="flex ">
         <ChatSidebar />
-        <ResizableHandle />
-      </ResizablePanel>
-      <ResizablePanel defaultSize={400}>
-        {children}
-        <ResizableHandle />
-      </ResizablePanel>
-    </ResizablePanelGroup>
+        <div className="w-full relative">{children}</div>
+      </div>
+    </>
   );
 }
 

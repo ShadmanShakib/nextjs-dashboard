@@ -3,9 +3,10 @@ import ChatAvatar from "./chat-avatar";
 import { cn } from "@/app/lib/utils";
 type Props = {
   active?: boolean;
+  online?: boolean;
 };
 
-const ChatItem = ({ active }: Props) => {
+const ChatItem = ({ active, online }: Props) => {
   return (
     <div
       className={cn(
@@ -13,7 +14,7 @@ const ChatItem = ({ active }: Props) => {
         active ? "bg-indigo-400 text-white" : "",
       )}
     >
-      <ChatAvatar online />
+      <ChatAvatar online={online} />
       <div className="">
         <p
           className={cn(

@@ -8,7 +8,7 @@ type Props = {
 
 function layout({ children }: Props) {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <div className="relative">
         <div className="fixed z-50 w-full h-16">
           <Topbar />
@@ -17,10 +17,10 @@ function layout({ children }: Props) {
           <div className="w-60 fixed z-50 mt-16">
             <Sidebar />
           </div>
-          <div className="  ml-60 mt-16 w-full">{children}</div>
+          <div className="  ml-60 mt-16 w-full flex-1">{children}</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
