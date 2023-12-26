@@ -5,7 +5,7 @@ type Props = {};
 
 function ChatBox({}: Props) {
   return (
-    <div className="bg-white px-4  absolute bottom-5 w-full rounded-md">
+    <div className="bg-white px-4   mb-5 w-full rounded-md">
       <div className="w-full flex justify-between shadow-md rounded-md py-1 px-2 items-center">
         <input
           className="focus:outline-none"
