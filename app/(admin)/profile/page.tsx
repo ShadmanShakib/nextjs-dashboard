@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import CoverImage from "./components/cover-image";
 
-type Props = {}
+type Props = {};
 
 export default function page({}: Props) {
   return (
-    <main className=''>
-      User Profile
+    <main className="">
+      <CoverImage />
     </main>
-  )
+  );
 }
