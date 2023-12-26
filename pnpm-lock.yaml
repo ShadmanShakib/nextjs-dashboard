@@ -106,6 +106,9 @@ dependencies:
     version: 4.4.7(@types/react@18.2.43)(react@18.2.0)
 
 devDependencies:
+  '@headlessui/tailwindcss':
+    specifier: ^0.2.0
+    version: 0.2.0(tailwindcss@3.3.6)
   '@types/lodash':
     specifier: ^4.14.202
     version: 4.14.202
@@ -326,6 +329,15 @@ packages:
     dependencies:
       tailwindcss: 3.3.6
     dev: false
+
+  /@headlessui/tailwindcss@0.2.0(tailwindcss@3.3.6):
+    resolution: {integrity: sha512-fpL830Fln1SykOCboExsWr3JIVeQKieLJ3XytLe/tt1A0XzqUthOftDmjcCYLW62w7mQI7wXcoPXr3tZ9QfGxw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      tailwindcss: ^3.0
+    dependencies:
+      tailwindcss: 3.3.6
+    dev: true
 
   /@hello-pangea/dnd@16.5.0(@types/react-dom@18.2.17)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-n+am6O32jo/CFXciCysz83lPM3I3F58FJw4uS44TceieymcyxQSfzK5OhzPAKrVBZktmuOI6Zim9WABTMtXv4A==}
