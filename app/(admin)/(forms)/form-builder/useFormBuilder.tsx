@@ -2,7 +2,10 @@
 import { create } from "zustand";
 interface IFormBuilder {
   form_title: string;
-  form_fields: any[];
+  form_fields: {
+    id: string;
+    title: string;
+  }[];
   setFormFields: (fields: any[]) => void;
   setFormTitle: (title: string) => void;
 }

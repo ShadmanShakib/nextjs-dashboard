@@ -20,9 +20,18 @@ export default function FormControls({}: Props) {
       },
     ]);
   };
+  const handleEditFieldTitle = (id: string, title: string) => {
+    const new_fields = form_fields.map((field) => {
+      if (field.id === id) {
+        return { ...field, title };
+      }
+      return field;
+    });
+    setFormFields(new_fields);
+  };
   return (
-    <div className="columns-1">
-      <div className="flex flex-col space-y-3">
+    <div className="flex flex-col  space-y-4  p-2">
+      <div className="flex flex-col space-y-2">
         <label>Form Title</label>
         <Input
           onChange={(e) => setFormTitle(e.target.value)}
@@ -32,11 +41,17 @@ export default function FormControls({}: Props) {
       </div>
       {map(form_fields, (field, index) => (
         <div key={index} className="flex flex-col space-y-3">
-          <label>Field {index + 1}</label>
-          <Input type="text" placeholder="Input form title" />
+          <label>Field Title</label>
+          <Input
+            onChange={(e) => handleEditFieldTitle(field.id, e.target.value)}
+            type="text"
+            placeholder="Input form title"
+          />
         </div>
       ))}
-      <Button onClick={handleSetFormFields}>Add new input</Button>
+      <Button className="mt-4" onClick={handleSetFormFields}>
+        Add new field
+      </Button>
     </div>
   );
 }
