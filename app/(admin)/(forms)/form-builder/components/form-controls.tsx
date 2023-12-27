@@ -6,6 +6,7 @@ import useFormBuilder from "../useFormBuilder";
 import { Button } from "@/app/components/ui/button";
 import { map } from "lodash";
 import { v4 as uuid } from "uuid";
+import FieldType from "./field-type";
 type Props = {};
 
 export default function FormControls({}: Props) {
@@ -47,6 +48,7 @@ export default function FormControls({}: Props) {
             type="text"
             placeholder="Input form title"
           />
+          <FieldType />
         </div>
       ))}
       <Button className="mt-4" onClick={handleSetFormFields}>
