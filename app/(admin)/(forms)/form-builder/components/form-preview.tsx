@@ -4,7 +4,6 @@ import useFormBuilder from "../useFormBuilder";
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui";
 import { map } from "lodash";
-import FieldType from "./field-type";
 
 type Props = {};
 
@@ -18,8 +17,10 @@ export default function FormPreview({}: Props) {
       {map(form_fields, (field) => {
         return (
           <div key={field.id} className="flex flex-col space-y-2">
-            <label htmlFor={field.title}>{field.title}</label>
-            <Input name={field.title} />
+            <label htmlFor={field.title}>
+              {field.title ? field.title : "Field name"}
+            </label>
+            <Input type={field.type} name={field.title} />
           </div>
         );
       })}

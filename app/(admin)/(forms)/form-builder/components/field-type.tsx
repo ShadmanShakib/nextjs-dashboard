@@ -1,12 +1,11 @@
-import React from "react";
+import React, { HTMLInputTypeAttribute } from "react";
 import { cn } from "@/app/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronsUpDown } from "lucide-react";
+import useFormBuilder from "../useFormBuilder";
 import {
   Command,
-  CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
 } from "@/app/components/ui/command";
 import {
@@ -31,14 +30,22 @@ const FieldTypes = [
     label: "Password",
     type: "password",
   },
+  {
+    id: 4,
+    label: "Email",
+    type: "email",
+  },
 ];
-type Props = {};
+type Props = {
+  type: HTMLInputTypeAttribute;
+  handleSetType: (type: HTMLInputTypeAttribute) => void;
+};
 
-export default function FieldType({}: Props) {
+export default function FieldType({ type, handleSetType }: Props) {
   const [open, setOpen] = React.useState(false);
-  const [type, setType] = React.useState("");
+
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
           variant="outline"
@@ -59,7 +66,7 @@ export default function FieldType({}: Props) {
               <CommandItem
                 key={field.id}
                 onSelect={() => {
-                  setType(field.type);
+                  handleSetType(field.type);
                   setOpen(false);
                 }}
               >

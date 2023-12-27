@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { HTMLInputTypeAttribute } from "react";
 import { Input } from "@/app/components/ui";
 import { useForm } from "react-hook-form";
 import useFormBuilder from "../useFormBuilder";
@@ -18,6 +18,8 @@ export default function FormControls({}: Props) {
       ...form_fields,
       {
         id: uuid(),
+        title: "New Field",
+        type: "text",
       },
     ]);
   };
@@ -25,6 +27,15 @@ export default function FormControls({}: Props) {
     const new_fields = form_fields.map((field) => {
       if (field.id === id) {
         return { ...field, title };
+      }
+      return field;
+    });
+    setFormFields(new_fields);
+  };
+  const handleEditFieldType = (id: string, type: HTMLInputTypeAttribute) => {
+    const new_fields = form_fields.map((field) => {
+      if (field.id === id) {
+        return { ...field, type };
       }
       return field;
     });
@@ -42,13 +53,18 @@ export default function FormControls({}: Props) {
       </div>
       {map(form_fields, (field, index) => (
         <div key={index} className="flex flex-col space-y-3">
-          <label>Field Title</label>
+          <label>{field.title ? field.title : "Field name"}</label>
           <Input
             onChange={(e) => handleEditFieldTitle(field.id, e.target.value)}
             type="text"
-            placeholder="Input form title"
+            placeholder="Enter field name"
           />
-          <FieldType />
+          <FieldType
+            handleSetType={(type: HTMLInputTypeAttribute) =>
+              handleEditFieldType(field.id, type)
+            }
+            type={field.type}
+          />
         </div>
       ))}
       <Button className="mt-4" onClick={handleSetFormFields}>
