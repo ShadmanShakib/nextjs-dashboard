@@ -4,6 +4,7 @@ import { v4 as uuid } from "uuid";
 import { HTMLInputTypeAttribute } from "react";
 interface IFormBuilder {
   form_title: string;
+  form_description: string;
   form_fields: {
     id: string;
     title: string;
@@ -14,10 +15,11 @@ interface IFormBuilder {
 }
 const useFormBuilder = create<IFormBuilder>()((set) => ({
   form_title: "Title",
+  form_description: "Describe about your form",
   form_fields: [
     {
       id: uuid(),
-      title: "Name",
+      title: "",
       type: "text",
     },
   ],

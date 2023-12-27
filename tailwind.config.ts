@@ -113,10 +113,28 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "collapsed-down": {
+          from: {
+            height: 0,
+          },
+          to: {
+            height: "var(--radix-collapsible-content-height)",
+          },
+          "collapsed-up": {
+            from: {
+              height: "var(--radix-collapsible-content-height)",
+            },
+            to: {
+              height: 0,
+            },
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "collapsed-down": "collapsed-down 0.2s ease-out",
+        "collapsed-up": "collapsed-up 0.2s ease-out",
       },
     },
   },
