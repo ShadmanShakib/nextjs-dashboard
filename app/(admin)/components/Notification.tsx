@@ -21,7 +21,7 @@ function Notification({}: Props) {
       <DropdownMenuTrigger>
         <div className="relative">
           <Bell className="text-white" />
-          <Badge className="absolute -right-2 -top-4 flex h-5 w-5 items-center justify-center rounded-full">
+          <Badge className="absolute -right-2 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-500">
             1
           </Badge>
         </div>
