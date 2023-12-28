@@ -10,6 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  Badge,
 } from "@/components/ui";
 import { AvatarFallback } from "@radix-ui/react-avatar";
 type Props = {};
@@ -18,7 +19,12 @@ function Notification({}: Props) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Bell className="text-white" />
+        <div className="relative">
+          <Bell className="text-white" />
+          <Badge className="absolute -right-2 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-500">
+            1
+          </Badge>
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="min-w-[10rem]" align="end">
         <DropdownMenuLabel className="w-full ">
@@ -31,8 +37,8 @@ function Notification({}: Props) {
         <DropdownMenuItem>
           <div className="flex items-center space-x-2">
             <div className="relative">
-              <div className="absolute z-50 right-0 bg-blue-400 rounded-full p-0.5 -top-3 border border-white">
-                <MessageCircle className="h-4 text-white w-4" />
+              <div className="absolute -top-3 right-0 z-50 rounded-full border border-white bg-blue-400 p-0.5">
+                <MessageCircle className="h-4 w-4 text-white" />
               </div>
               <Avatar>
                 <AvatarImage src="/cvpic.jpg" />

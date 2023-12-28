@@ -13,3 +13,4 @@ export { Input } from "./input";
 export { default as SearchBox } from "./search-box";
 
 export { Separator } from "./separator";
+export { Badge } from "./badge";
