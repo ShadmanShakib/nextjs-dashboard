@@ -1,18 +1,22 @@
 "use client";
 import React from "react";
+import { map } from "lodash";
+
 import useFormBuilder from "../useFormBuilder";
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui";
-import { map } from "lodash";
 
 type Props = {};
 
 export default function FormPreview({}: Props) {
-  const { form_title, form_fields } = useFormBuilder((state) => state);
+  const { form_title, form_fields, form_description } = useFormBuilder(
+    (state) => state,
+  );
   return (
     <div className="col-span-2 flex flex-col space-y-4 px-3 pt-20">
       <div className="">
         <h1 className="text-3xl">{form_title ? form_title : "Form Title"}</h1>
+        <p>{form_description ? form_description : "Describe your form"}</p>
       </div>
       {map(form_fields, (field) => {
         return (

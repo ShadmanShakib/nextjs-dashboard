@@ -12,6 +12,7 @@ interface IFormBuilder {
   }[];
   setFormFields: (fields: any[]) => void;
   setFormTitle: (title: string) => void;
+  setFormDescription: (description: string) => void;
 }
 const useFormBuilder = create<IFormBuilder>()((set) => ({
   form_title: "Title",
@@ -25,6 +26,8 @@ const useFormBuilder = create<IFormBuilder>()((set) => ({
   ],
   setFormFields: (fields: any[]) => set({ form_fields: fields }),
   setFormTitle: (title: string) => set({ form_title: title }),
+  setFormDescription: (description: string) =>
+    set({ form_description: description }),
 }));
 
 export default useFormBuilder;
