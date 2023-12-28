@@ -14,3 +14,5 @@ export { default as SearchBox } from "./search-box";
 
 export { Separator } from "./separator";
 export { Badge } from "./badge";
+
+export { default as Metric } from "./metric";

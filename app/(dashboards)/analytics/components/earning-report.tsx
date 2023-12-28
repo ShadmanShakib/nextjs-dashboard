@@ -7,6 +7,7 @@ import {
   CardFooter,
   CardTitle,
 } from "@/app/components/ui/card";
+import { Metric } from "@/app/components/ui";
 
 type Props = {};
 
@@ -15,19 +16,10 @@ export default function EarningReport({}: Props) {
     <Card>
       <CardHeader>
         <CardTitle>Earning Report</CardTitle>
-        <CardDescription>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </CardDescription>
+        <CardDescription>Weekly earning overview </CardDescription>
       </CardHeader>
       <CardContent>
-        <div>
-          <h1>Earning Report</h1>
-        </div>
-        <CardFooter>
-          <div>
-            <h1>Earning Report</h1>
-          </div>
-        </CardFooter>
+        <Metric>$590</Metric>
       </CardContent>
     </Card>
   );

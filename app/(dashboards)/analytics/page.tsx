@@ -1,8 +1,12 @@
 import React from "react";
-import { AnalyticCarousel } from "./components";
+import { AnalyticCarousel, EarningReport } from "./components";
 
 type Props = {};
 
 export default function page({}: Props) {
-  return <div className="bg-red-500 p-10"></div>;
+  return (
+    <div className="p-5">
+      <EarningReport />
+    </div>
+  );
 }
