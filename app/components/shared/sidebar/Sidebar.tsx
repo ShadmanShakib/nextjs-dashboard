@@ -23,7 +23,7 @@ type Props = {};
 
 const Sidebar = (props: Props) => {
   return (
-    <aside className="flex min-h-screen w-full flex-col space-y-1  bg-[#2e2e30] p-2  text-white dark:bg-gray-600 ">
+    <aside className="flex h-full min-h-screen w-full flex-col space-y-1  bg-[#2e2e30] p-2  text-white dark:bg-gray-600 ">
       <CollapsibleItem name="Dashbords" icon={<AppWindow />}>
         <SidebarLink
           href="/dashboard"

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Sidebar } from "@/app/components/shared";
+import { Topbar } from "@/app/(admin)/components";
 import {
   ResizablePanelGroup,
   ResizablePanel,
@@ -13,14 +14,17 @@ type Props = {
 
 export default function layout({ children }: Props) {
   return (
-    <ResizablePanelGroup direction="horizontal">
-      <ResizablePanel className="" defaultSize={20}>
-        <Sidebar />
-        <ResizableHandle withHandle />
-      </ResizablePanel>
-      <ResizablePanel defaultSize={80}>
-        <div className="">{children}</div>
-      </ResizablePanel>
-    </ResizablePanelGroup>
+    <div className="relative">
+      <Topbar />
+      <ResizablePanelGroup direction="horizontal">
+        <ResizablePanel className="" defaultSize={20}>
+          <Sidebar />
+          <ResizableHandle withHandle />
+        </ResizablePanel>
+        <ResizablePanel defaultSize={80}>
+          <div className="">{children}</div>
+        </ResizablePanel>
+      </ResizablePanelGroup>
+    </div>
   );
 }
