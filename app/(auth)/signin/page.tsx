@@ -4,10 +4,8 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <main className="flex  justify-center items-center h-screen w-full">
-      <div className="p-5 shadow-md rounded-md">
-        <Signinform />
-      </div>
+    <main className="flex h-screen  w-full items-center justify-center bg-[#05060f]">
+      <Signinform />
     </main>
   );
 };
